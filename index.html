@@ -8,60 +8,84 @@
 <style>
 *{box-sizing:border-box}
 body{
- margin:0;
- font-family:Arial,sans-serif;
- background:#080d1c;
- color:white;
+margin:0;
+font-family:Arial,sans-serif;
+background:#080d1c;
+color:white;
 }
 header{
- background:#111c35;
- padding:22px 10px;
- text-align:center;
- border-bottom:2px solid #18c8ff;
+background:#111c35;
+padding:25px 10px;
+text-align:center;
+border-bottom:3px solid #18c8ff;
 }
-header h1{color:#18c8ff;margin:0}
+header h1{color:#18c8ff;font-size:30px}
 header p{color:#ccc}
-.container{max-width:600px;margin:25px auto;padding:15px}
+.container{
+max-width:600px;
+margin:25px auto;
+padding:15px;
+}
 .card{
- background:#14213c;
- padding:20px;
- border-radius:15px;
- margin-bottom:18px;
- border:1px solid #24476b;
+background:#14213c;
+padding:20px;
+border-radius:15px;
+margin-bottom:18px;
+border:1px solid #24476b;
 }
 h2{color:#20caff}
 .packages{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:12px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
 }
 .package{
- background:#203453;
- padding:18px 8px;
- border-radius:10px;
- text-align:center;
- border:1px solid #39749a;
+background:#203453;
+padding:16px 8px;
+border-radius:10px;
+text-align:center;
+border:1px solid #39749a;
 }
-.package b{color:#20caff;font-size:20px}
+.package b{
+display:block;
+color:#20caff;
+margin-top:8px;
+font-size:19px;
+}
 input,select{
- width:100%;
- padding:14px;
- margin:10px 0;
- border-radius:8px;
- border:0;
- font-size:16px;
+width:100%;
+padding:14px;
+margin:10px 0;
+border-radius:8px;
+border:0;
+font-size:16px;
 }
 button{
- width:100%;
- padding:15px;
- border:0;
- border-radius:9px;
- background:#08b8f2;
- color:#071323;
- font-size:18px;
- font-weight:bold;
+width:100%;
+padding:15px;
+border:0;
+border-radius:9px;
+background:#08b8f2;
+color:#071323;
+font-size:18px;
+font-weight:bold;
 }
-footer{text-align:center;padding:25px;color:#aaa}
+#price{
+color:#20caff;
+font-size:20px;
+font-weight:bold;
+}
+.notice{
+background:#332b17;
+padding:12px;
+border-radius:8px;
+color:#ffe39b;
+}
+footer{
+text-align:center;
+padding:25px;
+color:#aaa;
+}
 </style>
 </head>
 <body>
@@ -75,37 +99,76 @@ footer{text-align:center;padding:25px;color:#aaa}
 
 <div class="card">
 <h2>💎 Diamond Packages</h2>
+
 <div class="packages">
-<div class="package">💎 25 Diamonds</div>
-<div class="package">💎 50 Diamonds</div>
-<div class="package">💎 100 Diamonds</div>
-<div class="package">💎 310 Diamonds</div>
-<div class="package">💎 520 Diamonds</div>
-<div class="package">💎 1060 Diamonds</div>
+<div class="package">
+💎 25 Diamonds
+<b>৳10</b>
+</div>
+
+<div class="package">
+💎 50 Diamonds
+<b>৳25</b>
+</div>
+
+<div class="package">
+💎 100 Diamonds
+<b>৳40</b>
+</div>
+
+<div class="package">
+💎 310 Diamonds
+<b>৳100</b>
+</div>
+
+<div class="package">
+💎 520 Diamonds
+<b>৳170</b>
+</div>
+
+<div class="package">
+💎 1060 Diamonds
+<b>৳300</b>
+</div>
 </div>
 </div>
 
 <div class="card">
 <h2>🛒 Place Your Order</h2>
+
 <form id="orderForm">
+
 <label>Free Fire Player ID</label>
-<input id="player" type="text"
-placeholder="Enter Player ID" required>
+<input
+id="player"
+type="text"
+placeholder="Enter Player ID"
+required>
 
 <label>Select Diamond Package</label>
+
 <select id="diamond" required>
 <option value="">Select Package</option>
-<option>25 Diamonds</option>
-<option>50 Diamonds</option>
-<option>100 Diamonds</option>
-<option>310 Diamonds</option>
-<option>520 Diamonds</option>
-<option>1060 Diamonds</option>
+<option value="25 Diamonds|10">25 Diamonds - ৳10</option>
+<option value="50 Diamonds|25">50 Diamonds - ৳25</option>
+<option value="100 Diamonds|40">100 Diamonds - ৳40</option>
+<option value="310 Diamonds|100">310 Diamonds - ৳100</option>
+<option value="520 Diamonds|170">520 Diamonds - ৳170</option>
+<option value="1060 Diamonds|300">1060 Diamonds - ৳300</option>
 </select>
 
+<p id="price">প্যাকেজ নির্বাচন করুন</p>
+
 <button type="submit">Place Order</button>
+
 </form>
+
 <p id="message"></p>
+</div>
+
+<div class="notice">
+⚠️ এটি পরীক্ষামূলক ওয়েবসাইট।
+এখনো আসল অর্ডার, পেমেন্ট ও ডায়মন্ড সরবরাহ চালু হয়নি।
 </div>
 
 </div>
@@ -115,14 +178,25 @@ placeholder="Enter Player ID" required>
 </footer>
 
 <script>
+const diamond=document.getElementById("diamond");
+
+diamond.addEventListener("change",function(){
+const data=this.value.split("|");
+
+document.getElementById("price").textContent=
+data.length===2 ?
+"আপনার দাম: ৳"+data[1] :
+"প্যাকেজ নির্বাচন করুন";
+});
+
 document.getElementById("orderForm")
 .addEventListener("submit",function(e){
- e.preventDefault();
- document.getElementById("message").textContent =
- "এটি একটি ডেমো অর্ডার। এখনো আসল পেমেন্ট বা টপ-আপ চালু হয়নি।";
+e.preventDefault();
+
+document.getElementById("message").textContent=
+"এটি পরীক্ষামূলক অর্ডার। এখনো অর্ডার জমা বা পেমেন্ট চালু হয়নি।";
 });
 </script>
 
 </body>
-  </html>
-  
+</html>
