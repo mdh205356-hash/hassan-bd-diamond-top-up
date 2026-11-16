@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HASSAN BD DIAMOND TOP UP</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#080d1c;
+ color:white;
+}
+header{
+ background:#111c35;
+ padding:22px 10px;
+ text-align:center;
+ border-bottom:2px solid #18c8ff;
+}
+header h1{color:#18c8ff;margin:0}
+header p{color:#ccc}
+.container{max-width:600px;margin:25px auto;padding:15px}
+.card{
+ background:#14213c;
+ padding:20px;
+ border-radius:15px;
+ margin-bottom:18px;
+ border:1px solid #24476b;
+}
+h2{color:#20caff}
+.packages{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:12px;
+}
+.package{
+ background:#203453;
+ padding:18px 8px;
+ border-radius:10px;
+ text-align:center;
+ border:1px solid #39749a;
+}
+.package b{color:#20caff;font-size:20px}
+input,select{
+ width:100%;
+ padding:14px;
+ margin:10px 0;
+ border-radius:8px;
+ border:0;
+ font-size:16px;
+}
+button{
+ width:100%;
+ padding:15px;
+ border:0;
+ border-radius:9px;
+ background:#08b8f2;
+ color:#071323;
+ font-size:18px;
+ font-weight:bold;
+}
+footer{text-align:center;padding:25px;color:#aaa}
+</style>
+</head>
+<body>
+
+<header>
+<h1>💎 HASSAN BD</h1>
+<p>DIAMOND TOP UP</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>💎 Diamond Packages</h2>
+<div class="packages">
+<div class="package">💎 25 Diamonds</div>
+<div class="package">💎 50 Diamonds</div>
+<div class="package">💎 100 Diamonds</div>
+<div class="package">💎 310 Diamonds</div>
+<div class="package">💎 520 Diamonds</div>
+<div class="package">💎 1060 Diamonds</div>
+</div>
+</div>
+
+<div class="card">
+<h2>🛒 Place Your Order</h2>
+<form id="orderForm">
+<label>Free Fire Player ID</label>
+<input id="player" type="text"
+placeholder="Enter Player ID" required>
+
+<label>Select Diamond Package</label>
+<select id="diamond" required>
+<option value="">Select Package</option>
+<option>25 Diamonds</option>
+<option>50 Diamonds</option>
+<option>100 Diamonds</option>
+<option>310 Diamonds</option>
+<option>520 Diamonds</option>
+<option>1060 Diamonds</option>
+</select>
+
+<button type="submit">Place Order</button>
+</form>
+<p id="message"></p>
+</div>
+
+</div>
+
+<footer>
+© 2026 HASSAN BD DIAMOND TOP UP
+</footer>
+
+<script>
+document.getElementById("orderForm")
+.addEventListener("submit",function(e){
+ e.preventDefault();
+ document.getElementById("message").textContent =
+ "এটি একটি ডেমো অর্ডার। এখনো আসল পেমেন্ট বা টপ-আপ চালু হয়নি।";
+});
+</script>
+
+</body>
+  </html>
+  
