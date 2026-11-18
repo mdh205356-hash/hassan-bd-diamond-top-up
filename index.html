@@ -1,179 +1,125 @@
-
+  
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-
-  <meta name="google-site-verification" content="1dhPz5ISgbCCPldVOytQD3j42V7YFjTSghRWn9YeyjQ" />
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HASSAN BD DIAMOND TOP UP</title>
 <style>
 *{box-sizing:border-box}
 body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#080d1c;
-color:white;
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:linear-gradient(135deg,#080d25,#251044);
+ color:white;
 }
-header{
-background:#111c35;
-padding:25px 10px;
-text-align:center;
-border-bottom:3px solid #18c8ff;
-}
-header h1{color:#18c8ff;font-size:30px}
-header p{color:#ccc}
-.container{
-max-width:600px;
-margin:25px auto;
-padding:15px;
-}
-.card{
-background:#14213c;
-padding:20px;
-border-radius:15px;
-margin-bottom:18px;
-border:1px solid #24476b;
-}
-h2{color:#20caff}
+header{text-align:center;padding:22px 12px}
+.banner{width:100%;max-height:230px;object-fit:cover;border-radius:14px}
+h1{color:#ff42b7;text-align:center}
+.subtitle{text-align:center;color:#ddd}
+.container{max-width:900px;margin:auto;padding:15px}
+h2{color:#55e5ff;text-align:center}
 .packages{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:12px;
 }
 .package{
-background:#203453;
-padding:16px 8px;
-border-radius:10px;
-text-align:center;
-border:1px solid #39749a;
+ background:#171d3c;
+ border:1px solid #a64dff;
+ border-radius:12px;
+ padding:18px 8px;
+ text-align:center;
 }
-.package b{
-display:block;
-color:#20caff;
-margin-top:8px;
-font-size:19px;
+.package h3{margin:5px;color:#fff}
+.price{color:#ff58c5;font-size:20px;font-weight:bold}
+button{
+ background:linear-gradient(90deg,#ff32a6,#8b45ff);
+ color:white;border:0;border-radius:9px;
+ padding:12px 18px;font-size:16px;
+ cursor:pointer;
+}
+.order,.payment{
+ background:#171d3c;
+ border:1px solid #4edcff;
+ border-radius:14px;
+ padding:18px;
+ margin-top:22px;
 }
 input,select{
-width:100%;
-padding:14px;
-margin:10px 0;
-border-radius:8px;
-border:0;
-font-size:16px;
+ width:100%;padding:13px;margin:8px 0;
+ border-radius:8px;border:1px solid #aaa;
+ font-size:15px;
 }
-button{
-width:100%;
-padding:15px;
-border:0;
-border-radius:9px;
-background:#08b8f2;
-color:#071323;
-font-size:18px;
-font-weight:bold;
-}
-#price{
-color:#20caff;
-font-size:20px;
-font-weight:bold;
-}
-.notice{
-background:#332b17;
-padding:12px;
-border-radius:8px;
-color:#ffe39b;
-}
-footer{
-text-align:center;
-padding:25px;
-color:#aaa;
-}
+.order button{width:100%;margin-top:10px}
+.notice{color:#ffd36a;text-align:center;font-size:13px}
+footer{text-align:center;padding:25px;color:#aaa}
 </style>
 </head>
 <body>
-<div style="text-align:center">
-<img src="file_0000000025d882089c69283523cf6152.png"
-alt="HASSAN BD DIAMOND TOP UP banner"
-style="width:100%;max-width:1000px;height:auto;">
-</div>
+
 <header>
-<h1>💎 HASSAN BD</h1>
-<p>DIAMOND TOP UP</p>
+<img class="banner" src="file_0000000025d882089c69283523cf6152.png" alt="HASSAN BD Banner">
+<h1>HASSAN BD DIAMOND TOP UP</h1>
+<p class="subtitle">Free Fire Diamond Top Up</p>
 </header>
 
 <div class="container">
-
-<div class="card">
 <h2>💎 Diamond Packages</h2>
 
 <div class="packages">
 <div class="package">
-💎 25 Diamonds
-<b>৳10</b>
+<h3>25 Diamonds</h3>
+<p class="price">৳10</p>
 </div>
-
 <div class="package">
-💎 50 Diamonds
-<b>৳25</b>
+<h3>50 Diamonds</h3>
+<p class="price">৳25</p>
 </div>
-
 <div class="package">
-💎 100 Diamonds
-<b>৳40</b>
+<h3>100 Diamonds</h3>
+<p class="price">৳40</p>
 </div>
-
 <div class="package">
-💎 310 Diamonds
-<b>৳100</b>
+<h3>310 Diamonds</h3>
+<p class="price">৳100</p>
 </div>
-
 <div class="package">
-💎 520 Diamonds
-<b>৳170</b>
+<h3>520 Diamonds</h3>
+<p class="price">৳170</p>
 </div>
-
 <div class="package">
-💎 1060 Diamonds
-<b>৳300</b>
-</div>
+<h3>1060 Diamonds</h3>
+<p class="price">৳300</p>
 </div>
 </div>
 
-<div class="card">
+<div class="order">
 <h2>🛒 Place Your Order</h2>
 
-<form id="orderForm">
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSfVNbujpOt_9PQT2VeS2ltJrUyt7LCEc8XyHQoCPb0QlJ9G2Q/viewform" method="get" target="_blank">
 
-<label>Free Fire Player ID</label>
-<input
-id="player"
-type="text"
-placeholder="Enter Player ID"
-required>
+<input type="text" placeholder="Player ID" required>
 
-<label>Select Diamond Package</label>
-
-<select id="diamond" required>
-<option value="">Select Package</option>
-<option value="25 Diamonds|10">25 Diamonds - ৳10</option>
-<option value="50 Diamonds|25">50 Diamonds - ৳25</option>
-<option value="100 Diamonds|40">100 Diamonds - ৳40</option>
-<option value="310 Diamonds|100">310 Diamonds - ৳100</option>
-<option value="520 Diamonds|170">520 Diamonds - ৳170</option>
-<option value="1060 Diamonds|300">1060 Diamonds - ৳300</option>
+<select required>
+<option value="">Select Diamond Package</option>
+<option>25 Diamonds - ৳10</option>
+<option>50 Diamonds - ৳25</option>
+<option>100 Diamonds - ৳40</option>
+<option>310 Diamonds - ৳100</option>
+<option>520 Diamonds - ৳170</option>
+<option>1060 Diamonds - ৳300</option>
 </select>
 
-<p id="price">প্যাকেজ নির্বাচন করুন</p>
-
 <button type="submit">Place Order</button>
-
 </form>
-
-<p id="message"></p>
 </div>
 
-<div class="notice">
-⚠️ এটি পরীক্ষামূলক ওয়েবসাইট।
-এখনো আসল অর্ডার, পেমেন্ট ও ডায়মন্ড সরবরাহ চালু হয়নি।
+<div class="payment">
+<h2>💳 Payment Information</h2>
+<h3>bKash Payment</h3>
+<p>আমাদের bKash নম্বর: 01XXXXXXXXX</p>
+<p class="notice">এটি নমুনা তথ্য। বাস্তব পেমেন্ট এখনো চালু করা হয়নি।</p>
 </div>
 
 </div>
@@ -181,45 +127,10 @@ required>
 <footer>
 © 2026 HASSAN BD DIAMOND TOP UP
 </footer>
-<script>
-const diamond = document.getElementById("diamond");
 
-diamond.addEventListener("change", function(){
-  const data = this.value.split("|");
-  document.getElementById("price").textContent =
-    data.length === 2 ? "আপনার দাম: ৳" + data[1] : "প্যাকেজ নির্বাচন করুন";
-});
+</body>
+</html>
 
-document.getElementById("orderForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  const player = document.getElementById("player").value;
-  const data = diamond.value.split("|");
-
-  if (!player || data.length !== 2) {
-    alert("Player ID ও প্যাকেজ নির্বাচন করুন");
-    return;
-  }
-
-  const message = "নতুন অর্ডার\nPlayer ID: " + player +
-    "\nপ্যাকেজ: " + data[0] + "\nদাম: ৳" + data[1];
-
-  window.open(
-  "https://docs.google.com/forms/d/e/1FAIpQLSfVNbujpOt_9PQT2VeS2ltJrUyt7LCEc8XyHQoCPb0QlJ9G2Q/viewform?usp=publish-editor",
-  "_blank"
-);
-});
-</script>
-
-
-  <section style="background:#fff0f7;padding:20px;margin:20px;border:2px solid #e2136e;border-radius:15px;text-align:center;">
-  <h2 style="color:#e2136e;">bKash Payment</h2>
-  <h3>আমাদের bKash নম্বর</h3>
-  <h2>01XXXXXXXXX</h2>
-  <p>পেমেন্টের নম্বর ও নির্দেশনা এখানে দেখানো হবে।</p>
-  <p>TrxID:</p>
-  <input type="text" placeholder="আপনার TrxID লিখুন">
-  <p style="color:red;">নমুনা — আসল পেমেন্ট এখনো চালু নয়।</p>
 </section>
 </body>
 </html>
